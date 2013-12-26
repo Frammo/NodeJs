@@ -7,22 +7,18 @@ DOCUMENT_ROOT = __dirname;
 CONFIG = JSON.parse(fs.readFileSync(DOCUMENT_ROOT + '/config.json'));
 
 requireService = function requireService(serviceName) {
-	return requireModule('Services/' + serviceName);
+	return require(DOCUMENT_ROOT + '/Services/' + serviceName + '.js');
 };
 
 requireModel = function requireModel(modelName) {
-	return requireModule('Models/' + modelName);
+	return require(DOCUMENT_ROOT + '/Models/' + modelName + '.js');
 };
 
 requireUtility = function requireUtility(utilityName) {
-	return requireModule('Utilities/' + utilityName);
+	return require(DOCUMENT_ROOT + '/Utilities/' + utilityName + '.js');
 }
 
-requireModule = function requireModule(moduleName) {
-	return require(DOCUMENT_ROOT + '/' + moduleName + '.js');
-}
-
-var routeConfig = requireModule('AppStart/routeConfig');
+var routeConfig = require(DOCUMENT_ROOT + '/AppStart/routeConfig.js');
 
 // Initialise the server ****************************************
 var serverConfig = CONFIG.server;
