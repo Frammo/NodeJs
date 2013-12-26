@@ -1,0 +1,17 @@
+{
+	"server" : {
+		"host" : "127.0.0.1",
+		"port" : "8080"
+	},
+	"database" : {
+		"host" : "127.0.0.1",
+		"port" : "default",
+		"dbName" : "",
+		"username" : "",
+		"password" : ""
+	},
+	"routing" : {
+		"defaultController" : "home",
+		"defaultAction" : "index"
+	}
+}

@@ -1,0 +1,24 @@
+<html>
+	<head>
+	</head>
+
+	<body>
+		<h2>Users in Database</h2>
+
+		<div id="user-data">
+			<ul>
+				{{user-data}}
+			</ul>
+		</div>
+		<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" ></script>
+		<script type="text/javascript" src="/socket.io/socket.io.js"></script>
+		<script type="text/javascript">
+			// Connect to the server side of the application
+			var socket = io.connect('127.0.0.1:8080');
+			var ul = $('#user-data > ul');
+			socket.on('user-added', function(user) {
+				ul.append('<li>' + user.name + ' - ' + user.email + '</li>');
+			})
+		</script>
+	</body>
+</html>
