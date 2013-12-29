@@ -1,7 +1,7 @@
-var userService = requireService('userService');
-var User = requireModel('Basic/User');
-var routing = requireModule('Framework/routing')
-var render = require('Framework/viewRendering');
+var userService = REQUIRE.service('userService');
+var User = REQUIRE.model('Basic/User');
+var routing = REQUIRE.mod('Framework/routing')
+var render = REQUIRE.mod('Framework/viewRendering');
 
 function add(response) {
 	render.renderView('socketio', 'add', response);

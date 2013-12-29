@@ -1,4 +1,4 @@
-var db = requireUtility('connect').getDb();
+var db = REQUIRE.utility('connect').getDb();
 
 function getUser(id) {
 

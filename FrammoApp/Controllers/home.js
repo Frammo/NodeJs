@@ -1,4 +1,4 @@
-var render = require(DOCUMENT_ROOT + "/Framework/viewRendering.js");
+var render = REQUIRE.mod('Framework/viewRendering');
 
 function index(response) {
 	render.renderView('home', 'index', response);
