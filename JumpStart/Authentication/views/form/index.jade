@@ -1,0 +1,25 @@
+extends ../layout
+
+block content
+	h1= title
+	p This is the form page
+
+	form(action = '/form/register', method = 'post')
+		.input-field
+			label Forename
+			input(type = 'text', name = 'forename')
+		.input-field
+			label Surname
+			input(type = 'text', name = 'surname')
+		.input-field
+			label Username
+			input(type = 'text', name = 'username')
+		.input-field
+			label Password
+			input(type = 'password', name = 'password')
+		.input-field
+			label Confirm Password
+			input(type = 'confirm-password', name = 'confirm-password')
+		.input-field
+			label
+			input(type = 'submit', value = 'Submit')
