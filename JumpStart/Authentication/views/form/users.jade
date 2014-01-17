@@ -1,0 +1,11 @@
+extends ../layout
+
+block content
+	h1= title
+	
+	table
+		for user in users
+			tr
+				td #{user.forename}
+				td #{user.surname}
+				td #{user.username}
